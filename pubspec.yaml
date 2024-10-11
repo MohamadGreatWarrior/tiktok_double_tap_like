@@ -1,0 +1,17 @@
+name: tiktok_double_tap_like
+description: "Tiktok double tap like animation"
+version: 1.0.0
+homepage: https://github.com/MohamadGreatWarrior/tiktok_double_tap_like
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
