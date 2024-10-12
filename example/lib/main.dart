@@ -35,8 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
         //Do something when the user double taps
       },
       likeWidget: const Image(image: AssetImage('assets/icons/heart.png')),
-      likeWidth: 100,
-      likeHeight: 100,
+      likeWidth: 200,
+      likeHeight: 200,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('TikTok Double Tap Like'),
