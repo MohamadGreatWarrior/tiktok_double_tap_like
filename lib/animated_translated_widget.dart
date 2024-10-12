@@ -1,10 +1,7 @@
-import 'dart:math';
+part of 'double_tap_like_widget.dart';
 
-import 'package:flutter/material.dart';
-
-class AnimatedTranslateWidget extends StatefulWidget {
-  const AnimatedTranslateWidget({
-    super.key,
+class _AnimatedTranslateWidget extends StatefulWidget {
+  const _AnimatedTranslateWidget({
     required this.translateDuration,
     required this.child,
     required this.onDispose,
@@ -20,7 +17,7 @@ class AnimatedTranslateWidget extends StatefulWidget {
   State createState() => _AnimatedTranslateWidgetState();
 }
 
-class _AnimatedTranslateWidgetState extends State<AnimatedTranslateWidget>
+class _AnimatedTranslateWidgetState extends State<_AnimatedTranslateWidget>
     with TickerProviderStateMixin {
   late final AnimationController animationController;
   late final Tween<Offset> offsetTween;

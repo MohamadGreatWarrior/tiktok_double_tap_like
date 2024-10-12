@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-import 'like_widget.dart';
-import 'animated_translated_widget.dart';
+part 'animated_translated_widget.dart';
+
+part 'like_widget.dart';
 
 class DoubleTapLikeWidget extends StatefulWidget {
   const DoubleTapLikeWidget({
@@ -46,10 +49,10 @@ class _DoubleTapLikeWidgetState extends State<DoubleTapLikeWidget> {
               key: ValueKey(e),
               start: e.x - widget.likeWidth / 2,
               top: e.y - widget.likeHeight / 1.3,
-              child: AnimatedTranslateWidget(
+              child: _AnimatedTranslateWidget(
                 translateDuration: widget.translateDuration,
                 curve: widget.curve,
-                child: LikeWidget(
+                child: _LikeWidget(
                   animationDuration: widget.animationDuration,
                   width: widget.likeWidth,
                   height: widget.likeHeight,

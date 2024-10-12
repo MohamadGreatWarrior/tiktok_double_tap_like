@@ -1,12 +1,9 @@
-import 'dart:math';
+part of 'double_tap_like_widget.dart';
 
-import 'package:flutter/material.dart';
+const List<double> _angles = [pi / 9, 0, -pi / 9];
 
-const List<double> angles = [pi / 9, 0, -pi / 9];
-
-class LikeWidget extends StatefulWidget {
-  const LikeWidget({
-    super.key,
+class _LikeWidget extends StatefulWidget {
+  const _LikeWidget({
     required this.width,
     required this.height,
     required this.child,
@@ -22,7 +19,7 @@ class LikeWidget extends StatefulWidget {
   State createState() => _LikeWidgetState();
 }
 
-class _LikeWidgetState extends State<LikeWidget>
+class _LikeWidgetState extends State<_LikeWidget>
     with SingleTickerProviderStateMixin {
   late final AnimationController animationController;
 
@@ -87,7 +84,7 @@ class _LikeWidgetState extends State<LikeWidget>
     super.dispose();
   }
 
-  var angle = angles[Random().nextInt(3)];
+  var angle = _angles[Random().nextInt(3)];
 
   @override
   Widget build(BuildContext context) {
