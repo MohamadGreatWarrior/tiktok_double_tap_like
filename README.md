@@ -1,39 +1,34 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MohamadGreatWarrior/resources/refs/heads/main/cover.jpg" alt="tiktok_double_tap_like" /> <br /><br />
+  <span>TikTok Double Tap Like</span>
+</p>
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+## About
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+TikTok Double Tap Like is a Flutter package that provides a widget that can be used to like a video by double tapping on it, just like TikTok.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Example
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+<img src="https://raw.githubusercontent.com/MohamadGreatWarrior/resources/refs/heads/main/2024-10-12%2007.36.16.gif" alt="tiktok_double_tap_like" width="250"/>
 
 ```dart
-const like = 'sample';
+DoubleTapLikeWidget(
+      onLike: () {
+        //Do something when the user double taps
+      },
+      likeWidget: const Image(image: AssetImage('assets/icons/heart.png')),
+      likeWidth: 200,
+      likeHeight: 200,
+      child: VideoPlayer(),
+    )
 ```
 
-## Additional information
+## Notes
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+* You have to provide a widget that will be displayed when the user double taps on the screen. You can use the `likeWidget` property to provide the widget.
+* You can also provide the width and height of the widget using the `likeWidth` and `likeHeight` properties.
+
+## Help me
+
+If you like this package you can support me on <br><br> <a href="https://www.buymeacoffee.com/tayan" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
