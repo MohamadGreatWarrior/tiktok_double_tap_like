@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MohamadGreatWarrior/resources/refs/heads/main/cover.jpg" alt="tiktok_double_tap_like" /> <br /><br />
+  <img src="https://raw.githubusercontent.com/MohamadGreatWarrior/resources/refs/heads/main/cover.jpg" alt="tiktok_double_tap_like" style="border-radius: 20px;" /> <br /><br />
   <span>TikTok Double Tap Like</span>
 </p>
 
@@ -10,6 +10,9 @@ TikTok Double Tap Like is a Flutter package that provides a widget that can be u
 ## Example
 
 <img src="https://raw.githubusercontent.com/MohamadGreatWarrior/resources/refs/heads/main/2024-10-12%2007.36.16.gif" alt="tiktok_double_tap_like" width="250"/>
+
+<br>
+<br>
 
 ```dart
 DoubleTapLikeWidget(
@@ -25,8 +28,10 @@ DoubleTapLikeWidget(
 
 ## Notes
 
-* You have to provide a widget that will be displayed when the user double taps on the screen. You can use the `likeWidget` property to provide the widget.
-* You can also provide the width and height of the widget using the `likeWidth` and `likeHeight` properties.
+* You have to provide a widget that will be displayed when the user double taps on the screen, whether `Text`, `Icon`...etc. You can use the `likeWidget` property to provide that widget.
+* You can also provide the width and height of the widget using the `likeWidth` and `likeHeight` properties. The default values are 200 each.
+* It's pretty efficient and performant, I've created the animation explicitly using `AnimationController`, `Animation`, `Tween` and `AnimatedBuilder`. Also, there's an applied mechanism to removing the added hearts off of the screen.
+
 
 ## Help me
 
