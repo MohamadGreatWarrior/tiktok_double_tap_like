@@ -1,6 +1,6 @@
 name: tiktok_double_tap_like
 description: "Tiktok double tap like animation"
-version: 1.0.0
+version: 1.0.0+1
 homepage: https://github.com/MohamadGreatWarrior/tiktok_double_tap_like
 
 environment:
