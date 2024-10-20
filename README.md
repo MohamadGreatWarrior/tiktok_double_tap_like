@@ -16,7 +16,7 @@ TikTok Double Tap Like is a Flutter package that provides a widget that can be u
 
 ```dart
 DoubleTapLikeWidget(
-      onLike: () {
+      onLike: (likeCount) {
         //Do something when the user double taps
       },
       likeWidget: const Image(image: AssetImage('assets/icons/heart.png')),
@@ -29,7 +29,14 @@ DoubleTapLikeWidget(
 ## Notes
 
 * You have to provide a widget that will be displayed when the user double taps on the screen, whether `Text`, `Icon`...etc. You can use the `likeWidget` property to provide that widget.
+
+
 * You can also provide the width and height of the widget using the `likeWidth` and `likeHeight` properties. The default values are 200 each.
+
+
+* You have the `likeCount` param in `onLike` in case you want to know how many times the user has liked the video.
+
+
 * It's pretty efficient and performant, I've created the animation explicitly using `AnimationController`, `Animation`, `Tween` and `AnimatedBuilder`. Also, there's an applied mechanism to removing the added hearts off of the screen.
 
 
