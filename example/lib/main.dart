@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return DoubleTapLikeWidget(
-      onLike: () {
+      onLike: (likeCount) {
         //Do something when the user double taps
       },
       likeWidget: const Image(image: AssetImage('assets/icons/heart.png')),

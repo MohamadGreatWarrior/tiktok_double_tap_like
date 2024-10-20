@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -14,16 +15,18 @@ class DoubleTapLikeWidget extends StatefulWidget {
     required this.likeWidget,
     this.translateDuration = const Duration(milliseconds: 2400),
     this.animationDuration = const Duration(milliseconds: 900),
+    this.resetDuration = const Duration(milliseconds: 1500),
     this.curve = Curves.easeInOutCubic,
     this.likeWidth = 200,
     this.likeHeight = 200,
   });
 
-  final VoidCallback onLike;
+  final ValueChanged<int> onLike;
   final Widget child;
   final Widget likeWidget;
   final Duration translateDuration;
   final Duration animationDuration;
+  final Duration resetDuration;
   final Curve curve;
   final double likeWidth;
   final double likeHeight;
@@ -34,6 +37,10 @@ class DoubleTapLikeWidget extends StatefulWidget {
 
 class _DoubleTapLikeWidgetState extends State<DoubleTapLikeWidget> {
   List<HeartInfo> hearts = [];
+
+  int likeCount = 0;
+
+  Timer? timer;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +75,16 @@ class _DoubleTapLikeWidgetState extends State<DoubleTapLikeWidget> {
           },
         ),
         GestureDetector(
-          onDoubleTap: widget.onLike,
+          onDoubleTap: () {
+            likeCount++;
+            widget.onLike(likeCount);
+
+            timer?.cancel();
+            timer = Timer(
+              widget.resetDuration,
+              () => likeCount = 0,
+            );
+          },
           onDoubleTapDown: (tapDownDetails) {
             setState(() {
               hearts.add(
